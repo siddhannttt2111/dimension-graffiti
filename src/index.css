@@ -56,10 +56,7 @@ input {
   align-items: center;
   justify-content: center;
   padding: 28px 18px 40px;
-  background:
-    radial-gradient(900px 500px at 15% 10%, rgba(255, 43, 214, 0.28), transparent 55%),
-    radial-gradient(800px 500px at 90% 80%, rgba(122, 246, 255, 0.2), transparent 50%),
-    linear-gradient(180deg, #140c28 0%, #07060c 55%);
+  background: #140c28;
 }
 
 .brand {

@@ -708,11 +708,7 @@ export class Match {
 
   private drawSky(viewW: number, viewH: number) {
     const ctx = this.ctx;
-    const g = ctx.createLinearGradient(0, this.cameraY, 0, this.cameraY + viewH);
-    g.addColorStop(0, "#1b1038");
-    g.addColorStop(0.45, "#3a1458");
-    g.addColorStop(1, "#0b0a12");
-    ctx.fillStyle = g;
+    ctx.fillStyle = "#1b1038";
     ctx.fillRect(this.cameraX - 40, this.cameraY - 40, viewW + 80, viewH + 80);
 
     ctx.globalAlpha = 0.35;
@@ -828,10 +824,7 @@ export class Match {
       ctx.restore();
     });
     const f = this.finish;
-    const g = ctx.createLinearGradient(f.x, f.y, f.x + f.w, f.y + f.h);
-    g.addColorStop(0, "#ff2bd6");
-    g.addColorStop(1, "#7af6ff");
-    ctx.fillStyle = g;
+    ctx.fillStyle = "#ff2bd6";
     ctx.globalAlpha = 0.55;
     ctx.fillRect(f.x, f.y, f.w, f.h);
     ctx.globalAlpha = 1;
@@ -940,11 +933,6 @@ export class Match {
 
   private drawVignette(w: number, h: number) {
     const ctx = this.ctx;
-    const g = ctx.createRadialGradient(w / 2, h / 2, h * 0.2, w / 2, h / 2, h * 0.85);
-    g.addColorStop(0, "rgba(0,0,0,0)");
-    g.addColorStop(1, "rgba(8,0,16,0.55)");
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, w, h);
     ctx.strokeStyle = "#7af6ff";
     ctx.globalAlpha = 0.35;
     ctx.lineWidth = 6;

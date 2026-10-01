@@ -280,7 +280,7 @@ function HeroPicker({
           className={`hero ${characterId === h.id ? "on" : ""}`}
           onClick={() => onHero(h.id)}
         >
-          <div className="swatch" style={{ background: `linear-gradient(90deg, ${h.color}, ${h.accent})` }} />
+          <div className="swatch" style={{ background: h.color, boxShadow: `inset 0 -6px 0 ${h.accent}` }} />
           <strong>{h.name}</strong>
           <div className="hint">{h.tag}</div>
         </button>
